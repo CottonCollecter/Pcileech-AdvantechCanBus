@@ -1,0 +1,389 @@
+;AdvCanBus.inf
+;
+; Installation file (.inf) for the CAN device.
+; MIC-3680
+; PCI-1680
+; UNO-2052(E)
+; PCM-3680
+; PCL-841
+; TPC-662G
+; EAMB-PH07 
+; TPC-1780
+; PCM-3680I
+; C001,C002,C004,C101,C102,C104
+; C201,C202,C204,C301,C302,C304
+; (c) Copyright 2010 ADVANTECH 
+;
+
+;--------- Version Section ---------------------------------------------------
+
+[Version]
+Signature="$WINDOWS NT$"
+Provider=%ProviderName%
+ClassGuid={866B7CD8-B1BA-47D2-9C63-BEA0EB8D1A27}
+Class=Advantech
+DriverVer=06/11/2015,4.4.2.0
+CatalogFile.NTx86=AdvCanBusx86.cat
+CatalogFile.NTIA64=AdvCanBusIA64.cat
+CatalogFile.NTAMD64=AdvCanBusamd64.cat
+
+
+
+;--------- SourceDiskNames and SourceDiskFiles Section -----------------------
+
+; These sections identify source disks and files for installation.  They are
+; shown here as an example, but commented out.
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+AdvCanBus.sys = 1,,
+
+;--------- ClassInstall/ClassInstall32 Section -------------------------------
+
+; NT Style
+[ClassInstall32]
+Addreg=Class_AddReg
+
+;--------- DestinationDirs Section -------------------------------------------
+
+;[DestinationDirs]
+ADV_DRIVER_FILE = 10,System32\Drivers
+
+[Class_AddReg]
+HKR,,,,%DeviceClassName%
+HKR,,Icon,,"-5"
+
+;--------- Manufacturer and Models Sections ----------------------------------
+
+[Manufacturer]
+%ProviderName%=eAuto ,NTx86, NTia64, NTamd64
+[eAuto]
+%Device_10% = PCM-3680, *Advantech\PCM-3680
+%Device_20% = AdvPCICan, PCI\VEN_13fe&DEV_3680
+%Device_30% = AdvPCICan, PCI\VEN_13fe&DEV_1680
+%Device_40% = AdvPCICan, PCI\VEN_13fe&DEV_2052
+%Device_50% = TPC-66, *Advantech\TPC-662G
+%Device_60% = PCL-841, *Advantech\PCL-841
+%Device_70% = EAMB-PH07, PCI\VEN_13fe&DEV_1681
+%Device_80% = AdvPCICan, PCI\VEN_13fe&DEV_C001
+%Device_90% = AdvPCICan, PCI\VEN_13fe&DEV_C002
+%Device_100% = AdvPCICan, PCI\VEN_13fe&DEV_C004
+%Device_110% = AdvPCICan, PCI\VEN_13fe&DEV_C101
+%Device_120% = AdvPCICan, PCI\VEN_13fe&DEV_C102
+%Device_130% = AdvPCICan, PCI\VEN_13fe&DEV_C104
+%Device_140% = AdvPCICan, PCI\VEN_13fe&DEV_C201
+%Device_150% = AdvPCICan, PCI\VEN_13fe&DEV_C202
+%Device_160% = AdvPCICan, PCI\VEN_13fe&DEV_C204
+%Device_170% = AdvPCICan, PCI\VEN_13fe&DEV_C301
+%Device_180% = AdvPCICan, PCI\VEN_13fe&DEV_C302
+%Device_190% = AdvPCICan, PCI\VEN_13fe&DEV_C304
+[eAuto.NTx86]
+%Device_10% = PCM-3680, *Advantech\PCM-3680
+%Device_20% = AdvPCICan, PCI\VEN_13fe&DEV_3680
+%Device_30% = AdvPCICan, PCI\VEN_13fe&DEV_1680
+%Device_40% = AdvPCICan, PCI\VEN_13fe&DEV_2052
+%Device_50% = TPC-66, *Advantech\TPC-662G
+%Device_60% = PCL-841, *Advantech\PCL-841
+%Device_70% = EAMB-PH07, PCI\VEN_13fe&DEV_1681
+%Device_80% = AdvPCICan, PCI\VEN_13fe&DEV_C001
+%Device_90% = AdvPCICan, PCI\VEN_13fe&DEV_C002
+%Device_100% = AdvPCICan, PCI\VEN_13fe&DEV_C004
+%Device_110% = AdvPCICan, PCI\VEN_13fe&DEV_C101
+%Device_120% = AdvPCICan, PCI\VEN_13fe&DEV_C102
+%Device_130% = AdvPCICan, PCI\VEN_13fe&DEV_C104
+%Device_140% = AdvPCICan, PCI\VEN_13fe&DEV_C201
+%Device_150% = AdvPCICan, PCI\VEN_13fe&DEV_C202
+%Device_160% = AdvPCICan, PCI\VEN_13fe&DEV_C204
+%Device_170% = AdvPCICan, PCI\VEN_13fe&DEV_C301
+%Device_180% = AdvPCICan, PCI\VEN_13fe&DEV_C302
+%Device_190% = AdvPCICan, PCI\VEN_13fe&DEV_C304
+[eAuto.NTia64]
+%Device_10% = PCM-3680, *Advantech\PCM-3680
+%Device_20% = AdvPCICan, PCI\VEN_13fe&DEV_3680
+%Device_30% = AdvPCICan, PCI\VEN_13fe&DEV_1680
+%Device_40% = AdvPCICan, PCI\VEN_13fe&DEV_2052
+%Device_50% = TPC-66, *Advantech\TPC-662G
+%Device_60% = PCL-841, *Advantech\PCL-841
+%Device_70% = EAMB-PH07, PCI\VEN_13fe&DEV_1681
+%Device_80% = AdvPCICan, PCI\VEN_13fe&DEV_C001
+%Device_90% = AdvPCICan, PCI\VEN_13fe&DEV_C002
+%Device_100% = AdvPCICan, PCI\VEN_13fe&DEV_C004
+%Device_110% = AdvPCICan, PCI\VEN_13fe&DEV_C101
+%Device_120% = AdvPCICan, PCI\VEN_13fe&DEV_C102
+%Device_130% = AdvPCICan, PCI\VEN_13fe&DEV_C104
+%Device_140% = AdvPCICan, PCI\VEN_13fe&DEV_C201
+%Device_150% = AdvPCICan, PCI\VEN_13fe&DEV_C202
+%Device_160% = AdvPCICan, PCI\VEN_13fe&DEV_C204
+%Device_170% = AdvPCICan, PCI\VEN_13fe&DEV_C301
+%Device_180% = AdvPCICan, PCI\VEN_13fe&DEV_C302
+%Device_190% = AdvPCICan, PCI\VEN_13fe&DEV_C304
+
+
+[eAuto.NTamd64]
+%Device_10% = PCM-3680, *Advantech\PCM-3680
+%Device_20% = AdvPCICan, PCI\VEN_13fe&DEV_3680
+%Device_30% = AdvPCICan, PCI\VEN_13fe&DEV_1680
+%Device_40% = AdvPCICan, PCI\VEN_13fe&DEV_2052
+%Device_50% = TPC-66, *Advantech\TPC-662G
+%Device_60% = PCL-841, *Advantech\PCL-841
+%Device_70% = EAMB-PH07, PCI\VEN_13fe&DEV_1681
+%Device_80% = AdvPCICan, PCI\VEN_13fe&DEV_C001
+%Device_90% = AdvPCICan, PCI\VEN_13fe&DEV_C002
+%Device_100% = AdvPCICan, PCI\VEN_13fe&DEV_C004
+%Device_110% = AdvPCICan, PCI\VEN_13fe&DEV_C101
+%Device_120% = AdvPCICan, PCI\VEN_13fe&DEV_C102
+%Device_130% = AdvPCICan, PCI\VEN_13fe&DEV_C104
+%Device_140% = AdvPCICan, PCI\VEN_13fe&DEV_C201
+%Device_150% = AdvPCICan, PCI\VEN_13fe&DEV_C202
+%Device_160% = AdvPCICan, PCI\VEN_13fe&DEV_C204
+%Device_170% = AdvPCICan, PCI\VEN_13fe&DEV_C301
+%Device_180% = AdvPCICan, PCI\VEN_13fe&DEV_C302
+%Device_190% = AdvPCICan, PCI\VEN_13fe&DEV_C304
+
+[PCM-3680]
+;CopyFiles=ADV_DRIVER_FILE
+AddReg=Adv_AddReg_PCM3680
+LogConfig=ISA_2K_IRQ
+
+
+; --------- LogConfig Section -----------------
+
+[ISA_2K_IRQ]
+ConfigPriority=HARDRECONFIG
+MemConfig=200@C8000-EF000%fffffE00	; MemoryRange0;
+IRQConfig=3,4,5,6,7,9,10,11,12,14,15
+ConfigPriority=HARDRECONFIG
+MemConfig=200@C8000-EF000%fffffE00	; MemoryRange0;
+IRQConfig=3,4,5,6,7,9,10,11,12,14,15
+
+
+
+; --------- AddService Section -----------------
+
+[PCM-3680.Services]
+AddService = AdvCanDev, 0x00000002, Adv3680_AddService
+
+
+[Adv3680_AddService]
+DisplayName    = %SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 1                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\AdvCanBus.sys
+AddReg		   = PCM3680_Service_Add
+
+
+[Adv_AddReg_PCM3680]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\drivers\AdvCanBus.sys"
+HKR,,TypesSupported,0x00010001,7
+
+[PCM3680_Service_Add]
+HKR,"PCM-3680","PortNumber", 0x00010003, 2
+HKR,"PCM-3680","PortType", 0x00010003, 1
+
+[PCL-841]
+;CopyFiles=ADV_DRIVER_FILE
+AddReg=Adv_AddReg_PCL-841
+LogConfig=ISA_2K_IRQ
+
+
+; --------- AddService Section -----------------
+
+[PCL-841.Services]
+AddService = AdvCanDev, 0x00000002, Adv_AddService
+
+
+[Adv_AddService]
+DisplayName    = %SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 1                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\AdvCanBus.sys
+AddReg		   = PCL841_Service_Add
+
+[Adv_AddReg_PCL-841]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\drivers\AdvCanBus.sys"
+HKR,,TypesSupported,0x00010001,7
+
+[PCL841_Service_Add]
+HKR,"PCL-841","PortNumber", 0x00010003, 2
+HKR,"PCL-841","PortType", 0x00010003, 1
+
+[TPC-66]
+;CopyFiles=ADV_DRIVER_FILE
+AddReg=Adv_AddReg_TPC-66
+LogConfig=ISA_2K_IRQ_TPC-66
+
+
+; --------- LogConfig Section -----------------
+
+[ISA_2K_IRQ_TPC-66]
+ConfigPriority=HARDRECONFIG
+MemConfig=200@DA000-DA200%fffffE00	
+IRQConfig=5
+
+
+
+
+; --------- AddService Section -----------------
+
+[TPC-66.Services]
+AddService = AdvCanDev, 0x00000002, Adv_AddService_TPC-66
+
+
+[Adv_AddService_TPC-66]
+DisplayName    = %SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 1                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\AdvCanBus.sys
+AddReg		   = TPC66_Service_Add
+
+
+[Adv_AddReg_TPC-66]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\drivers\AdvCanBus.sys"
+HKR,,TypesSupported,0x00010001,7
+
+[TPC66_Service_Add]
+HKR,"TPC-662G","PortNumber", 0x00010003, 1
+HKR,"TPC-662G","PortType", 0x00010003, 1
+;
+; General installation section
+;
+
+[AdvPCICan]
+AddReg = Adv_AddReg
+;
+; File sections
+;
+
+[AdvPCICan.HW]
+AddReg = AdvPCICan_addreg
+
+[AdvPCICan_addreg]
+HKR, Interrupt Management,,0x00000010
+HKR, Interrupt Management\MessageSignaledInterruptProperties,,0x00000010
+HKR, Interrupt Management\MessageSignaledInterruptProperties,MSISupported,0x00010001,1
+
+
+;
+; Service Installation
+;
+
+[AdvPCICan.Services]
+AddService = AdvCanDev, 0x00000002 , AdvPCICan_Service_Inst
+
+[AdvPCICan_Service_Inst]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Pointer Port
+ServiceBinary  = %12%\AdvCanBus.sys
+AddReg		   = AdvPCI_Service_Add
+
+
+[Adv_AddReg]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\drivers\AdvCanBus.sys"
+HKR,,TypesSupported,0x00010001,7
+
+[AdvPCI_Service_Add]
+HKR,"MIC-3680","PortNumber", 0x00010003, 2
+HKR,"MIC-3680","PortType", 0x00010003, 0
+HKR,"PCI-1680","PortNumber", 0x00010003, 2
+HKR,"PCI-1680","PortType", 0x00010003, 0
+HKR,"UNO-2052(E)","PortNumber", 0x00010003, 2
+HKR,"UNO-2052(E)","PortType", 0x00010003, 0
+HKR,"ADVANTECH C001 CAN card ( 1 PORT )","PortNumber", 0x00010003, 1
+HKR,"ADVANTECH C001 CAN card ( 1 PORT )","PortType", 0x00010003, 3
+HKR,"ADVANTECH C002 CAN card ( 2 PORT )","PortNumber", 0x00010003, 2
+HKR,"ADVANTECH C002 CAN card ( 2 PORT )","PortType", 0x00010003, 3
+HKR,"ADVANTECH C004 CAN card ( 4 PORT )","PortNumber", 0x00010003, 4
+HKR,"ADVANTECH C004 CAN card ( 4 PORT )","PortType", 0x00010003, 3
+HKR,"ADVANTECH C101 CAN card ( 1 PORT,support CANopen )","PortNumber", 0x00010003, 1
+HKR,"ADVANTECH C101 CAN card ( 1 PORT,support CANopen )","PortType", 0x00010003, 4
+HKR,"ADVANTECH C102 CAN card ( 2 PORT,support CANopen )","PortNumber", 0x00010003, 2
+HKR,"ADVANTECH C102 CAN card ( 2 PORT,support CANopen )","PortType", 0x00010003, 4
+HKR,"ADVANTECH C104 CAN card ( 4 PORT,support CANopen )","PortNumber", 0x00010003, 4
+HKR,"ADVANTECH C104 CAN card ( 4 PORT,support CANopen )","PortType", 0x00010003, 4
+HKR,"ADVANTECH C201 CAN card ( 1 PORT )","PortNumber", 0x00010003, 1
+HKR,"ADVANTECH C201 CAN card ( 1 PORT )","PortType", 0x00010003, 5
+HKR,"ADVANTECH C202 CAN card ( 2 PORT )","PortNumber", 0x00010003, 2
+HKR,"ADVANTECH C202 CAN card ( 2 PORT )","PortType", 0x00010003, 5
+HKR,"ADVANTECH C204 CAN card ( 4 PORT )","PortNumber", 0x00010003, 4
+HKR,"ADVANTECH C204 CAN card ( 4 PORT )","PortType", 0x00010003, 5
+HKR,"ADVANTECH C301 CAN card ( 1 PORT,support CANopen )","PortNumber", 0x00010003, 1
+HKR,"ADVANTECH C301 CAN card ( 1 PORT,support CANopen )","PortType", 0x00010003, 6
+HKR,"ADVANTECH C302 CAN card ( 2 PORT,support CANopen )","PortNumber", 0x00010003, 2
+HKR,"ADVANTECH C302 CAN card ( 2 PORT,support CANopen )","PortType", 0x00010003, 6
+HKR,"ADVANTECH C304 CAN card ( 4 PORT,support CANopen )","PortNumber", 0x00010003, 4
+HKR,"ADVANTECH C304 CAN card ( 4 PORT,support CANopen )","PortType", 0x00010003, 6
+
+[EAMB-PH07]
+
+;
+; File sections
+;
+
+
+;
+; Service Installation
+;
+
+[EAMB-PH07.Services]
+AddService = AdvCanDev, 0x00000002 , EAMB-PH07_Service_Inst, EAMB-PH07_Inst
+
+[EAMB-PH07_Service_Inst]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Pointer Port
+ServiceBinary  = %12%\AdvCanBus.sys
+AddReg		   = PH07_Service_Add
+
+
+[EAMB-PH07_Inst]
+AddReg = Adv_AddReg_EAMB-PH07
+
+
+
+[Adv_AddReg_EAMB-PH07]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\drivers\AdvCanBus.sys"
+HKR,,TypesSupported,0x00010001,7
+
+[PH07_Service_Add]
+HKR,"EAMB-PH07","PortNumber", 0x00010003, 1
+HKR,"EAMB-PH07","PortType", 0x00010003, 0
+; --------- Files (common) -------------
+
+[ADV_DRIVER_FILE]
+AdvCanBus.sys
+
+;--------- Strings Section ---------------------------------------------------
+
+[Strings]
+ProviderName="Advantech"                      	 ;Your Company Name here
+MfgName="eAuto"                         	 ;Name of HW Manufacturer here
+DeviceClassName="Advantech ICOM CAN cards"       ;Description of Device class here
+SvcDesc="AdvCanBus"                              ;Description of NT service here
+DiskId1 = "ADVANTECH Installation Disk #1 (Advantech)"
+Device_10="PCM-3680"   	 ;Description of Device here
+Device_20="MIC-3680"
+Device_30="PCI-1680"
+Device_40="UNO-2052(E)"
+Device_50="TPC-662G"
+Device_60="PCL-841"
+Device_70="EAMB-PH07"
+Device_80="ADVANTECH C001 CAN card ( 1 PORT )"
+Device_90="ADVANTECH C002 CAN card ( 2 PORT )"
+Device_100="ADVANTECH C004 CAN card ( 4 PORT )"
+Device_110="ADVANTECH C101 CAN card ( 1 PORT,support CANopen )"
+Device_120="ADVANTECH C102 CAN card ( 2 PORT,support CANopen )"
+Device_130="ADVANTECH C104 CAN card ( 4 PORT,support CANopen )"
+Device_140="ADVANTECH C201 CAN card ( 1 PORT )"
+Device_150="ADVANTECH C202 CAN card ( 2 PORT )"
+Device_160="ADVANTECH C204 CAN card ( 4 PORT )"
+Device_170="ADVANTECH C301 CAN card ( 1 PORT,support CANopen )"
+Device_180="ADVANTECH C302 CAN card ( 2 PORT,support CANopen )"
+Device_190="ADVANTECH C304 CAN card ( 4 PORT,support CANopen )"
