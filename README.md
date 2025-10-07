@@ -15,7 +15,7 @@ Stealth integration with the Pcileech framework.
 🎯 Purpose
 This release is intended for:
 
-Researchers exploring DMA and USB3 stealth techniques.
+Researchers exploring DMA and stealth techniques.
 For research and learning purposes only — not intended for misuse.
 
 👉 Join our [[discord](https://discord.gg/ajXCy3naaR)]for more info and technical discussions.
